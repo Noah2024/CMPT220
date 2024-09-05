@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Debug {
     public static void main(String[] args) {
-        System.out.print("Noah Yurasko")
+        System.out.print("Noah Yurasko");
         //I've already set up a scanner with the name 'sc' for you!
         Scanner sc = new Scanner(System.in);
         //here's a good working example for you to reference!
@@ -17,11 +17,14 @@ public class Debug {
 
         //finish this one for me by receiving and printing the user's age back to them
         System.out.println("How old are you? ");
+        String age = sc.nextLine();
+        System.out.print("You are " + age + " years old!");
 
 
         //can you do some math for me? take these variable and print out the sum of them!
         int num1 = 10;
         int num2 = 37;
+        System.out.print(num1+num2);
         //?
 
         
