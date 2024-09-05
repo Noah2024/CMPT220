@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Debug {
     public static void main(String[] args) {
+        System.out.print("Noah Yurasko")
         //I've already set up a scanner with the name 'sc' for you!
         Scanner sc = new Scanner(System.in);
         //here's a good working example for you to reference!
