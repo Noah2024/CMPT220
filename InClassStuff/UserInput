@@ -1,0 +1,14 @@
+import java.util.Scanner
+
+public static UserInput{
+    public static void main(Strings[] args {
+        Scanner sc = new Scanner(System.in)
+        System.out.print("What is your name?");
+        String name = sc.nextLine();
+        System.out.print("Hello " + name  + "!");
+
+        System.out.print("What is your last name?");
+        String latName = sc.nextLine();
+        print("Hello " + name + " " + latName + "!");
+    }
+}
