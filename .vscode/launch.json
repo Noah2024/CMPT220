@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "DealOrNoDeal",
+            "request": "launch",
+            "mainClass": "DealOrNoDeal",
+            "projectName": "CMPT220_faa29a6a"
+        },
+        {
             "type": "jdk",
             "request": "launch",
             "name": "Launch Java App"

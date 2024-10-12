@@ -1,4 +1,3 @@
-import java.text.MessageFormat;
 /*
 Take the given array and keep track of:
 1. Any duplicate numbers
@@ -14,13 +13,13 @@ public class Array {
         for (int I = 0; I<myArray.length; I+=1){
             int numReps = 0;
             int upperNum = myArray[I]; 
-            for (int i = I; i<myArray.length; i+=1){//May need I+1
+            for (int i = I+1; i<myArray.length; i+=1){//May need I+1
                 if (upperNum == myArray[i]){
                     numReps += 1;
                 }
             }
             if (numReps != 0){
-                System.out.println(MessageFormat.format("{I} is repeated {numReps} times", I, numReps));
+                System.out.println(String.format("%d is repeated %d times", myArray[I], numReps));
             }
         }
         //you cannot use the array util. Do this one by hand :(

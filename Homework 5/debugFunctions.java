@@ -12,7 +12,7 @@ I give you two fully working method examples with and without parameters and cal
 */
 
 import java.util.Scanner;
-public class Main {
+public class debugFunctions {
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
 
@@ -26,21 +26,38 @@ public class Main {
 
     System.out.println("im going to print out the word Dog now.");
     printDog();
+    System.out.println(problem2(5));
+    System.out.println(problem3(10));
+    System.out.print(problem5("You"));
       
     }
-
-  
     public static int add(int zyx, int tuv){
-
-
         return(zyx + tuv);
-
-
     }
-
-  
     public static void printDog(){
         System.out.println("Dog");
+    }
+    public static int problem2(int input){
+        int sum = input;
+        for (int i = input-1; i > 0; i--){
+            sum *= i;
+        }
+        return(sum);
+    }
+    public static int problem3(int input){
+        int sum = 0;
+        //No hint! what do you need to complete this task?
+        for (int i = 1; i<input+1; i+=1){
+            sum += i;
+        }
+        return(sum);
+    }
+    public static String problem5(String input){
+        String reverseInpt = "";
+        for (int i = input.length(); i>0; i-=1){
+            reverseInpt += input.substring(i-1, i);
+        }
+        return(reverseInpt);
     }
 
   

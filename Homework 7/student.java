@@ -12,16 +12,21 @@ public class student{
     String year;
     double gpa;
     int id;
+    public static int freeLunchId = 0;
     public student(String n, String y, double g, int i){
         name = n;
         year = y;
         gpa = g;
         id = i;
     }
+    public boolean isHonorRoll(){
+        return((gpa > 3.6 ? true : false));
+    }
+    public boolean isFreeLunch(){
+        return((id == freeLunchId ? true : false));
+    }
     
     //new method
 
-    
-    //new method
 
 }
