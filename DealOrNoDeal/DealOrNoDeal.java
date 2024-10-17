@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
@@ -45,11 +44,11 @@ public class DealOrNoDeal {
         excludeList[mainCase-1] = allNums[mainCase-1];
         int casesSeen = 1; //starts at one to accout for users choice
         while (gameOn){
-            System.out.print(Arrays.toString(excludeList));
+            System.out.println(Arrays.toString(excludeList));
             if (casesSeen != 25){
                 int numToSee = rand.nextInt(1,4);
-                System.out.println(casesSeen);
-                System.out.println(numToSee);
+                //System.out.println(casesSeen);
+                //System.out.println(numToSee);
                 if ((casesSeen + numToSee) >= 26){
                     numToSee = 26 - casesSeen - 1;
 
@@ -75,9 +74,9 @@ public class DealOrNoDeal {
                     System.out.print(" contains $");
                     System.out.println(caseNums[casesToView[i]-1]);//Subtracting one so index lines up with case numbers
                 }
-                
+                float bankOffer = genBankeroffer();
                 System.out.print("The Banker would like to make you an offer! \nThe Banker: \"Alright Alright, ill offer you ");
-                System.out.print(genBankeroffer());
+                System.out.print(bankOffer);
                 System.out.println("\nThe Banker: \"Deal, or No Deal?\"");
                 System.out.println("Type 1 to accept the bankers deal, 0 to keep playing");
 
@@ -92,9 +91,9 @@ public class DealOrNoDeal {
                     System.out.println("Since you decided to enter bad input, your still playing. Cause I said so.");
                 }
                 if (playerInt == 1){
-                    System.out.print("Your case: Case #");
-                    System.out.print(mainCase);
-                    System.out.println(" Contains............");
+                    System.out.print("Horay! You got...");
+                    System.out.println(bankOffer);
+                    System.out.print("But you did miss out on...");
                     System.out.println(allNums[mainCase-1]);
                     System.out.print("Thanks for playing!");
                     gameOn = false;
@@ -105,7 +104,7 @@ public class DealOrNoDeal {
                 System.out.println("FINAL CASE!");
                 System.out.println("The Banker is going to make you one final deal");
                 System.out.print("The Banker: \" I tell you what, ill give you ");
-                System.out.println(genBankeroffer()/2);
+                System.out.print(genBankeroffer());
                 System.out.println("\" \n Type 1 to accept the bankers deal, or 0 to open your own case");
                 
                 System.out.println("Deal or no deal");
@@ -117,11 +116,13 @@ public class DealOrNoDeal {
                         System.out.println("Really? On the final choice you enter bad input, honestly fuck you, you lose");
                         System.out.print("GAME OVER! LOSER!");
                         gameOn = false;
+                        return;
                     }
                 }catch (NumberFormatException e){
                     System.out.println("Really? On the final choice you enter bad input, honestly fuck you, you lose");
                     System.out.print("GAME OVER! LOSER!");
                     gameOn = false;
+                    return;
                 }
                 if (finalInt == 1){
                     int lastCase = 0;
@@ -134,6 +135,11 @@ public class DealOrNoDeal {
                     System.out.println(allNums[lastCase]);
                     System.out.println("Thanks for playing!");
                     gameOn = false;
+                }else{
+                    System.out.print("Congraduations! \n You Won");
+                    System.out.println(allNums[mainCase-1]);
+                    System.out.println("Thanks for playing!");
+                    gameOn = false; 
                 }
             }
             
