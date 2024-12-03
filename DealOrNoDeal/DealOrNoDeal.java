@@ -44,7 +44,7 @@ public class DealOrNoDeal {
         excludeList[mainCase-1] = allNums[mainCase-1];
         int casesSeen = 1; //starts at one to accout for users choice
         while (gameOn){
-            System.out.println(Arrays.toString(excludeList));
+            //System.out.println(Arrays.toString(excludeList));
             if (casesSeen != 25){
                 int numToSee = rand.nextInt(1,4);
                 //System.out.println(casesSeen);
